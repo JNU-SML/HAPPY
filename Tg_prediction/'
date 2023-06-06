@@ -1,0 +1,25 @@
+#!/bin/sh
+#PBS -N representation
+#PBS -q batch
+#PBS -l nodes=1:ppn=2:gpus=1
+
+cd $PBS_O_WORKDIR
+
+NPROCS=`wc -l < $PBS_NODEFILE`
+
+cd /home/Gabriella/polymagic_Tg/src
+
+source ~/.bashrc
+conda activate tensorflow-gpu
+
+n_gpu='3'
+repre='S2'
+ext='False'
+ppty='Tg'
+python3 rnn_exp.py --GPU $n_gpu --repre $repre --ppty $ppty --dataset NEW_Tg_top_dataset.csv --trainset NEW_Tg_top --trainset_n 1 --exten $ext  --train true --LR 1e-4 --top true
+
+# ppty='Tg'
+# python3 rnn_exp.py --GPU $n_gpu --repre $repre --ppty $ppty --dataset NEW_Tg_top_dataset.csv --trainset NEW_Tg_top --trainset_n 1 --exten $ext  --train true --LR 1e-5 --top true
+
+
+exit 0
