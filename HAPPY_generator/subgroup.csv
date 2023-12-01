@@ -1,0 +1,13 @@
+,smiles,subgroup
+0,c2ccc1[nH]cnc1c2,Bn
+1,c1ccccc1,B
+2,[C][CH2][CH2][CH3],Cf
+3,[CH2][CH3],Ct
+4,O=c1ccc(=O)[nH]1,Ma
+5,[C][CH]([CH3])[CH3],Cq
+6,[C]([CH3])([CH3])[CH3],Cp
+7,c2ccc1ccccc1c2,Bc
+8,O=c1[nH]c(=O)c2ccccc12,Bh
+9,C1CCCCC1,H
+10,O=CO,Co
+11,[nH]3c1ccccc1c2ccccc23,Nbb
